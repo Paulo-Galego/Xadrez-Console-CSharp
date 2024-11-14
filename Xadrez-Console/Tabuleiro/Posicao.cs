@@ -1,7 +1,7 @@
 ﻿
 using System.Security.Cryptography;
 
-namespace Tabuleiro
+namespace tabuleiro
 {
     public class Posicao
     {
