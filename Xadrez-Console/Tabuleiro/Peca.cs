@@ -4,6 +4,11 @@ namespace tabuleiro
 {
     public class Peca
     {
+        public Posicao posicao { get; set; }
+        public Cor cor { get; protected set; }
+        public int qtdMovimentos { get; set; }
+        public Tabuleiro tab { get; protected set; }
+
         public Peca(Tabuleiro tab,Cor cor)
         {
             this.posicao = null;
@@ -12,9 +17,11 @@ namespace tabuleiro
             this.tab = tab;
         }
 
-        public Posicao  posicao { get; set; }
-        public Cor cor { get; protected set; }
-        public int qtdMovimentos { get; set; }
-        public Tabuleiro tab { get; protected set; }
+        public void incrementarQteMovimentos()
+        {
+            qtdMovimentos++;
+        }
+
+       
     }
 }
